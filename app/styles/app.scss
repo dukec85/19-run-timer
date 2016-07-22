@@ -8,14 +8,16 @@ ul {
   list-style: none;
 }
 .fa-plus {
-  border: solid #00bbd3;
+  font-size: 14px;
+  color: $Title-White;
+  text-align: right;
+  background: $Button-Green;
   border-radius: 50%;
-  background: blue;
+  padding: 1.5rem;
+  margin-top: 44%;
+  margin-left: 92%;
 }
-body,
-h1,
-h2,
-li,
+
 p {
   margin: 0;
   padding: 0;
@@ -30,7 +32,7 @@ ul {
   justify-content: space-around;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(61,50,50,1) 65%);
+  background: $Title-White;
 }
 .top-container {
   width: $width;
