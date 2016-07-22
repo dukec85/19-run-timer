@@ -9,7 +9,6 @@ Router.map(function() {
   this.route('review');
   this.route('new-run');
   this.route('run');
-  this.route('new');
 });
 
 export default Router;
