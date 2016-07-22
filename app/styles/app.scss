@@ -1,14 +1,98 @@
-
-$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
-
 @import 'box-sizing';
 @import 'variables';
-
 body {
   margin: 0;
 }
-
 ul {
   padding-left: 0;
   list-style: none;
+}
+.fa-plus {
+  border: solid #00bbd3;
+  border-radius: 50%;
+  background: blue;
+}
+body,
+h1,
+h2,
+li,
+p {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+.whole-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(61,50,50,1) 65%);
+}
+.top-container {
+  width: $width;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
+  background: $Header-Bar-Blue;
+  &__inner {
+    width: 100%;
+    .title {
+      padding: 1rem;
+      color: $Title-White;
+    }
+  }
+}
+.container {
+  &__inner {
+    background: black;
+    height: 80vh;
+    position: relative;
+  }
+}
+.circle {
+  color: $Title-White;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.app {
+  width: $width;
+  padding: 1rem;
+  &-list {
+    list-style: none;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    margin: -1rem;
+    &__item {
+      color: $Regular-Text;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 1rem;
+      &-time {
+        color: $Green-Text;
+      }
+    }
+  }
+}
+.divider {
+  border-bottom: $Placeholder-Text solid 0.1rem;
+}
+.text-input {
+  margin-bottom: 1rem;
+  background: transparent;
+  border: none;
+  border-bottom: $Placeholder-Text solid 0.1rem;
+  width: 100%;
+  font-size: 1.5rem;
+  color: $Green-Text;
+  &::-webkit-input-placeholder {
+    color: $Placeholder-Text;
+  }
+}
+form {
+  padding: 1rem;
 }
