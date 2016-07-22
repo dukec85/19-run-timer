@@ -6,6 +6,7 @@
 
       {{#link-to 'detail' value._id }}
         <li class="app-list__item divider">
+          Here is some text.
           <p class="app-list__item-date">{{value.runDate}}</p>
           <p class="app-list__item-time">{{value.runTime}}</p>
         </li>
@@ -13,10 +14,9 @@
     {{/each}}
   </ul>
 
+  {{outlet}}
+
 </div>
 {{#link-to 'new-run'}}
   <i class="fa fa-plus" aria-hidden="true"></i>
 {{/link-to}}
-
-
-{{outlet}}

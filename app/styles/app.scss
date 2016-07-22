@@ -2,6 +2,7 @@
 @import 'variables';
 body {
   margin: 0;
+  color: white;
 }
 ul {
   padding-left: 0;
@@ -70,7 +71,7 @@ ul {
     flex-direction: column;
     margin: -1rem;
     &__item {
-      color: $Regular-Text;
+      color: $Title-White;
       display: flex;
       justify-content: space-between;
       padding-top: 1rem;
@@ -92,7 +93,7 @@ ul {
   font-size: 1.5rem;
   color: $Green-Text;
   &::-webkit-input-placeholder {
-    color: $Placeholder-Text;
+    color: $Title-White;
   }
 }
 form {
