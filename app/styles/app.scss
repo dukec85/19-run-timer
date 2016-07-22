@@ -71,7 +71,7 @@ ul {
     flex-direction: column;
     margin: -1rem;
     &__item {
-      color: $Title-White;
+      color: $Regular-Text;
       display: flex;
       justify-content: space-between;
       padding-top: 1rem;
@@ -93,7 +93,7 @@ ul {
   font-size: 1.5rem;
   color: $Green-Text;
   &::-webkit-input-placeholder {
-    color: $Title-White;
+    color: $Regular-Text;
   }
 }
 form {
