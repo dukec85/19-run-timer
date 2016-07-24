@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
       runTime:this.runTime,
       runDate:this.runDate,
       runNotes:this.runNotes,
-    }
+    };
     return fetch('http://tiny-tn.herokuapp.com/collections/runs-cd',{
       headers:{
         'Content-Type' : 'application/json',
@@ -15,8 +15,7 @@ export default Ember.Controller.extend({
       },
       method:'post',
       body: JSON.stringify(data)
-    });
-
+      });
+    }
   }
-}
 });

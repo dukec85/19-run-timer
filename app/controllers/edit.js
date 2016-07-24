@@ -14,7 +14,6 @@ export default Ember.Controller.extend({
         method: 'PUT',
         body: JSON.stringify(data)
       });
-
     }
   }
 });

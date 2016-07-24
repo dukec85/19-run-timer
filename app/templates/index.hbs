@@ -1,22 +1,18 @@
 <div class="app">
   <ul class="app-list">
-    #
     {{#each model as |value|}}
-
 
       {{#link-to 'detail' value._id }}
         <li class="app-list__item divider">
-          Text
           <p class="app-list__item-date">{{value.runDate}}</p>
           <p class="app-list__item-time">{{value.runTime}}</p>
         </li>
       {{/link-to}}
     {{/each}}
   </ul>
-
-  {{outlet}}
-
 </div>
-{{#link-to 'new-run'}}
-  <i class="fa fa-plus" aria-hidden="true"></i>
+{{#link-to 'new'}}
+  <h2 class="circle"><span>+</span></h2>
 {{/link-to}}
+
+{{outlet}}
