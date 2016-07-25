@@ -8,16 +8,6 @@ ul {
   padding-left: 0;
   list-style: none;
 }
-.fa-plus {
-  font-size: 14px;
-  color: $Title-White;
-  text-align: right;
-  background: $Button-Green;
-  border-radius: 50%;
-  padding: 1.5rem;
-  margin-top: 44%;
-  margin-left: 92%;
-}
 p {
   margin: 0;
   padding: 0;
@@ -54,11 +44,19 @@ ul {
     position: relative;
   }
 }
-.circle {
+.plus {
   color: $Title-White;
+  font-weight: lighter;
   position: absolute;
   right: 0;
   bottom: 0;
+  border: solid $Button-Green;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  background-color: $Button_Green;
+  padding-top: 0.5%;
 }
 .app {
   width: $width;
