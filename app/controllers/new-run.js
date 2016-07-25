@@ -18,9 +18,9 @@ export default Ember.Controller.extend({
     })
     .then((res) => res.json())
         .then(() => {
-          this.set('runTime', '')
-          this.set('runDate', '')
-          this.set('runNotes', '')
+          this.set('runTime', '');
+          this.set('runDate', '');
+          this.set('runNotes', '');
       });
     }
   }
