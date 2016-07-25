@@ -4,9 +4,9 @@ export default Ember.Controller.extend({
   actions:{
   newRun(){
     const data = {
-      runTime:this.runTime,
-      runDate:this.runDate,
-      runNotes:this.runNotes,
+      runTime: this.runTime,
+      runDate: this.runDate,
+      runNotes: this.runNotes,
     };
     return fetch('http://tiny-tn.herokuapp.com/collections/runs-cd',{
       headers:{
@@ -14,7 +14,13 @@ export default Ember.Controller.extend({
         'Accept' : 'application/json'
       },
       method:'post',
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
+    })
+    .then((res) => res.json())
+        .then(() => {
+          this.set('runTime', '')
+          this.set('runDate', '')
+          this.set('runNotes', '')
       });
     }
   }
