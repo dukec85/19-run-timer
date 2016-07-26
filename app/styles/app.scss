@@ -96,3 +96,49 @@ ul {
 form {
   padding: 1rem;
 }
+
+.cancel {
+  font-size: 0.8rem;
+  font-weight: bold;
+  width: 150%;
+  height: 100%;
+}
+
+.save {
+  font-size: 0.8rem;
+  font-weight: bold;
+  width: 10%;
+  height: 2rem;
+  background-color: $Button-Green;
+}
+
+.circle {
+
+}
+
+.fa-angle-left {
+  color: #000000;
+  border: solid $Button-Grey;
+  border-radius: 50%;
+  background-color: $Button-Grey;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-top: 30%;
+  margin-left: 2%;
+  text-align: center;
+  padding-top: 1%;
+  padding-right: 0.4%;
+}
+
+.fa-pencil-square-o {
+  color: $Title-White;
+  border: solid $Button-Green;
+  border-radius: 50%;
+  background-color: $Button-Green;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 95%;
+  text-align: center;
+  padding-top: 1%;
+  padding-right: 0.4%;
+}
