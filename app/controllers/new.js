@@ -2,26 +2,25 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   actions: {
-    newRun() {
+    addRun() {
       const data = {
-        runTime: this.runTime,
-        runDate: this.runDate,
-        runNotes: this.runNotes,
+        time: this.time,
+        date: this.date,
+        notes: this.notes,
       };
-      return fetch('http://tiny-tn.herokuapp.com/collections/runs-cd', {
+      fetch('http://tiny-tn.herokuapp.com/collections/runs-cd', {
           headers: {
-            'Content-Type': 'application/json',
+            'Content-type': 'application/json',
             'Accept': 'application/json'
           },
           method: 'post',
           body: JSON.stringify(data),
-        })
-        .then((res) => res.json())
+        }).then((res) => res.json())
         .then((person) => {
           this.setProperties({
-            'runTime': '',
-            'runDate': '',
-            'runNotes': ''
+            'time': '',
+            'date': '',
+            'notes': ''
           });
           this.transitionToRoute('index');
         });

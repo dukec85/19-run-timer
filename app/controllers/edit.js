@@ -4,7 +4,7 @@ export default Ember.Controller.extend({
   actions: {
     edit(_id) {
       const data = this.model;
-      fetch('http://tiny-tn.herokuapp.com/collections/runs-cd/${_id}'', {
+      fetch(`http://tiny-tn.herokuapp.com/collections/runs-cd/${_id}`, {
         headers: {
           'Content-type': 'application/json',
           'Accept': 'application/json'

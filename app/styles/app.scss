@@ -1,144 +1,173 @@
-@import 'box-sizing';
+@import 'button-styles';
 @import 'variables';
-body {
-  margin: 0;
-  color: white;
-}
-ul {
-  padding-left: 0;
-  list-style: none;
-}
-p {
-  margin: 0;
-  padding: 0;
-}
-ul {
-  padding: 0;
-  margin: 0;
-}
-.whole-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 100vh;
-  background: #000000;
-}
-.top-container {
-  width: $width;
-  border-top-left-radius: 0.3rem;
-  border-top-right-radius: 0.3rem;
-  background: $Header-Bar-Blue;
-  &__inner {
-    width: 100%;
-    .title {
-      padding: 1rem;
-      color: $Title-White;
-    }
-  }
-}
-.container {
-  &__inner {
-    background: black;
-    height: 80vh;
-    position: relative;
-  }
-}
-.plus {
-  color: $Title-White;
-  font-weight: lighter;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  border: solid $Button-Green;
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  text-align: center;
-  background-color: $Button_Green;
-  padding-top: 0.5%;
-}
-.app {
-  width: $width;
-  padding: 1rem;
-  &-list {
-    list-style: none;
-    padding: 0 1rem;
-    display: flex;
-    flex-direction: column;
-    margin: -1rem;
-    &__item {
-      color: $Regular-Text;
-      display: flex;
-      justify-content: space-between;
-      padding-top: 1rem;
-      &-time {
-        color: $Green-Text;
-      }
-    }
-  }
-}
-.divider {
-  border-bottom: $Placeholder-Text solid 0.1rem;
-}
-.text-input {
-  margin-bottom: 1rem;
-  background: transparent;
-  border: none;
-  border-bottom: $Placeholder-Text solid 0.1rem;
-  width: 100%;
-  font-size: 1.5rem;
-  color: $Green-Text;
-  &::-webkit-input-placeholder {
-    color: $Regular-Text;
-  }
-}
-form {
-  padding: 1rem;
+
+* {
+  box-sizing: border-box;
 }
 
-.cancel {
-  font-size: 0.8rem;
-  font-weight: bold;
-  width: 150%;
+body {
+  margin: 0;
+  font-weight: 100;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: $regular-text;
+}
+
+.mat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 100vh;
+  background: black;
+}
+
+.screen {
+  margin: auto;
+  width: 20rem;
+  height: 35rem;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.app-nav {
+  background: $header-bar-blue;
+  color: $title-white;
+  display: flex;
+}
+
+.app-title {
+  font-size: 2rem;
+  font-family: 'Fjalla One', sans-serif;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $title-white;
+}
+
+.container {
+  padding: $gutter;
+  max-width: 20rem;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  flex-grow: 1;
+}
+
+.app-main {
+  width: 100%;
+  height: 100%;
+  background: $app-background;
+  display: flex;
+  flex-direction: column;
+  color: $regular-text;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.page-title {
+  color: $title-white;
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
+}
+
+.new-run__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-field {
+  background: transparent;
+  color: $regular-text;
+  border: none;
+  border-bottom: 1px solid $placeholder-text;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  margin-bottom: $gutter;
+  font-family: 'Cantarell', sans-serif;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
 }
 
-.save {
-  font-size: 0.8rem;
-  font-weight: bold;
-  width: 10%;
-  height: 2rem;
-  background-color: $Button-Green;
+.runs-list {
+  color: $regular-text;
 }
 
-.circle {
-
+.runs-list__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid $regular-text;
+  font-family: 'Cantarell', sans-serif;
+  line-height: 0.8rem;
 }
 
-.fa-angle-left {
-  color: #000000;
-  border: solid $Button-Grey;
-  border-radius: 50%;
-  background-color: $Button-Grey;
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-top: 30%;
-  margin-left: 2%;
-  text-align: center;
-  padding-top: 1%;
-  padding-right: 0.4%;
+.my-run {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 10px;
+  font-family: 'Cantarell', sans-serif;
 }
 
-.fa-pencil-square-o {
-  color: $Title-White;
-  border: solid $Button-Green;
-  border-radius: 50%;
-  background-color: $Button-Green;
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-left: 95%;
-  text-align: center;
-  padding-top: 1%;
-  padding-right: 0.4%;
+.full-detail {
+  font-family: 'Cantarell', sans-serif;
+}
+
+.run-time {
+  color: $green-text;
+}
+
+.footer {
+  width: 100%;
+  background: black;
+  color: white;
+  margin: 0;
+  &__container {
+    width: 70%;
+    margin: 0 auto;
+  }
+  &__content {
+    padding: 1rem 0;
+    margin: 0;
+    font-family: 'Fjalla One', sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    a {
+      text-decoration: none;
+      color: $header-bar-blue;
+      &:hover {
+        color: $title-white;
+      }
+    }
+  }
 }

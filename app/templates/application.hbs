@@ -1,16 +1,23 @@
-<div class="whole-container">
-  <div class="whole-container__inner">
-    <div class="top-container">
-      <div class="top-container__inner">
-        <h2 class="title">Run Timer</h2>
+<<div class="mat">
+  <div class="screen">
+    <div class="app">
+      <nav class="app-nav">
+        <div class="container">
+          {{#link-to 'application'}}
+          <p class="app-title"><i class="fa fa-clock-o"></i> Log New Run</p>
+          {{/link-to}}
+        </div>
+      </nav>
+
+      <div class="app-main">
+        <div class="container">
+
+          {{outlet}}
+
+        </div>
       </div>
     </div>
-    <div class="container">
-      <div class="container__inner">
-
-        {{outlet}}
-
-      </div>
-    </div>
+  </div>
+  <div class="footer">
   </div>
 </div>

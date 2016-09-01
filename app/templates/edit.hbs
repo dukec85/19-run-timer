@@ -1,20 +1,21 @@
-<ul class="app-list">
-  <form {{action "editRun" model._id on="submit"}}>
-    <li class="app-list__item">
+<div class="new-run__page">
+  <h1 class="page-title">Edit Run</h1>
+  <form class="new-run__form" {{ action "edit" model._id on="submit"}}>
 
-      {{input type="text" class="app-list__item text-input" value=model.runTime placeholder="Run Time"}}
-    </li>
-    <li class="app-list__item">
-      {{input type="text" class="app-list__item text-input" value=model.runDate placeholder="Run Date"}}
-    </li>
-    <li class="app-list__item">
-      {{input type="text" class="app-list__item notes text-input" value=model.runNotes placeholder="Run Notes"}}
-    </li>
-    <li class="app-list__item">
+    {{input class="input-field" type="data" value=model.time placeholder="Run Time"}}
+    {{input class="input-field" type="data" value=model.date placeholder="Run Date"}}
+    {{textarea rows="4" class="input-field" type="text" value=model.notes placeholder="Run Notes"}}
+
+    <div class="button-wrapper">
       {{#link-to 'index'}}
-        <button type="button" class="cancel">Cancel</button>
+        <button type="button" class="cancel-btn form-btn">Cancel</button>
       {{/link-to}}
-      <button type="button" class="save">Save</button>
-    </li>
+
+      <button type="submit" class="save-btn form-btn">Save</button>
+    </div>
+
   </form>
-</ul>
+
+</div>
+
+{{outlet}}
